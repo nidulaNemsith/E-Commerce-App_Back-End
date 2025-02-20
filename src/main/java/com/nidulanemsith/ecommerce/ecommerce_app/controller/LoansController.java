@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class LoansController {
-    @GetMapping("/welcome")
-    public String welcome() {
-        return "Welcome to Ecommerce Application";
+    @GetMapping("/myLoans")
+    public String getLoansDetails() {
+        return "Here are the loans details from the DB";
     }
 }

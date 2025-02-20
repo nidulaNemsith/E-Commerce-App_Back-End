@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ContactController {
-    @GetMapping("/welcome")
-    public String welcome() {
-        return "Welcome to Ecommerce Application";
+    @GetMapping("/Contact")
+    public String saveContactInquiryDetails() {
+        return "Inquiry details are saved to the DB";
     }
 }
