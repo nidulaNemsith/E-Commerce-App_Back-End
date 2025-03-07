@@ -26,7 +26,6 @@ public class EazyBankProdUsernamePwdAuthenticationProvider implements Authentica
         String pwd = authentication.getCredentials().toString();
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if (passwordEncoder.matches(pwd, userDetails.getPassword())) {
-            // Fetch Age details and perform validation to check if age >18
             return new UsernamePasswordAuthenticationToken(username,pwd,userDetails.getAuthorities());
         }else {
             throw new BadCredentialsException("Invalid password!");
